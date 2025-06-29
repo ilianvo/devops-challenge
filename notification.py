@@ -1,6 +1,6 @@
 import os
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 
 def send_notification():
@@ -9,7 +9,7 @@ def send_notification():
     custom_variable = os.getenv("CUSTOM_VARIABLE", "devops-challenge")
     
     # Generate timezone-aware UTC timestamp
-    timestamp = datetime.now(datetime.UTC).isoformat()
+    timestamp = datetime.now(timezone.utc).isoformat()
     
     # Prepare payload
     payload = {
