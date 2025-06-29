@@ -21,7 +21,7 @@ def send_notification():
     # Send POST request
     try:
         response = requests.post(
-            "https://varengold.io/notification",
+            "https://iliantech.org/",
             json=payload,
             timeout=10
         )
