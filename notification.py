@@ -8,8 +8,8 @@ def send_notification():
     image_version = os.getenv("IMAGE_VERSION", "latest")
     custom_variable = os.getenv("CUSTOM_VARIABLE", "devops-challenge")
     
-    # Generate timestamp in ISO 8601 format
-    timestamp = datetime.utcnow().isoformat()
+    # Generate timezone-aware UTC timestamp
+    timestamp = datetime.now(datetime.UTC).isoformat()
     
     # Prepare payload
     payload = {
