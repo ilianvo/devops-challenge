@@ -15,12 +15,13 @@ resource "docker_container" "notify_container" {
 variable "dockerhub_username" {
   description = "Docker Hub username (e.g., yourusername)"
   type        = string
+  default     = "ilianvo"
 }
 
 variable "image_version" {
   description = "Version of the Docker image (e.g., v1.0.0)"
   type        = string
-  default     = "v1.0.0"
+  default     = "v1.0.10"
 }
 
 variable "custom_variable" {
