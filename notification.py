@@ -18,6 +18,9 @@ def send_notification():
         "custom_variable": custom_variable
     }
     
+    # Print the payload being sent
+    print(f"Sending payload:\n{json.dumps(payload, indent=2)}")
+    
     # Send POST request
     try:
         response = requests.post(
@@ -27,7 +30,7 @@ def send_notification():
         )
         response.raise_for_status()
         print(f"Notification sent successfully: {response.status_code}")
-        print(f"Payload: {json.dumps(payload, indent=2)}")
+        print(f"Payload sent: {json.dumps(payload, indent=2)}")
     except requests.RequestException as e:
         print(f"Failed to send notification: {e}")
         exit(1)
