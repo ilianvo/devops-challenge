@@ -72,3 +72,28 @@ Docker Hub Account: With a repository named notify-deploy (or update the reposit
 
 GitHub Secrets: Configure DOCKERHUB_USERNAME (your Docker Hub username) and DOCKERHUB_TOKEN (a Docker Hub access token).
 
+## Deploy
+
+How to deploy.
+
+```
+git clone https://github.com/ilianvo/devops-challenge.git
+
+```
+```
+cd devops-challenge/terraform
+
+```
+```
+terraform init
+terraform plan
+terraform apply
+
+```
+
+```
+docker ps -a
+docker logs <container ID>
+```
+
+
